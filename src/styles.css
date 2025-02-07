@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@layer components {
+  .nav-item {
+    @apply block uppercase font-bold p-4 bg-rose-800 text-white hover:text-rose-800 hover:bg-rose-100;
+  }
+  .one-user {
+    @apply bg-red-50 p-4 my-4;
+  }
+  .loading-center {
+    @apply h-screen flex justify-center items-center text-xl;
+  }
+  .home-nav {
+    @apply bg-rose-800 p-8 text-3xl font-bold text-white uppercase hover:cursor-pointer hover:bg-rose-100 hover:text-rose-800;
+  }
+}

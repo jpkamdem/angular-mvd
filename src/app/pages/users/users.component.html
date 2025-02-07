@@ -1,0 +1,15 @@
+@if (users().length > 0) {
+<h1 class="block text-center my-6 font-bold text-xl">Liste des utilisateurs</h1>
+<ul class="bg-red-50 mt-4 inline-flex flex-col">
+  @for (user of users(); track user.id) {
+  <li [routerLink]="['/users', user.id]"
+    class="bg-rose-800 text-white font-bold hover:cursor-pointer hover:bg-rose-100 hover:text-rose-800 hover:font-bold">
+    <p class="p-8 capitalize">
+      {{ user.name }}
+    </p>
+  </li>
+  }
+</ul>
+} @else {
+<p class="loading-center">Chargement des données...</p>
+}

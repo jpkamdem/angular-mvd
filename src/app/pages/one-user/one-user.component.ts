@@ -2,10 +2,11 @@ import { Component, effect, inject, signal } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../types/user';
+import { RedirectButtonComponent } from '../../components/redirect-button/redirect-button.component';
 
 @Component({
   selector: 'one-user',
-  imports: [],
+  imports: [RedirectButtonComponent],
   providers: [UserService],
   templateUrl: './one-user.component.html',
 })

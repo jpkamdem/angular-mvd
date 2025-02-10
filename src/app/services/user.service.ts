@@ -13,7 +13,7 @@ export class UserService {
 
   private async fetchUsers() {
     try {
-      const response = await this.api.get<User>(
+      const response = await this.api.get<User[]>(
         'https://jsonplaceholder.typicode.com/users'
       );
 

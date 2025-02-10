@@ -19,6 +19,20 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'comments',
+    loadComponent: () =>
+      import('./pages/comments/comments.component').then(
+        (c) => c.CommentsComponent
+      ),
+  },
+  {
+    path: 'comments/:id',
+    loadComponent: () =>
+      import('./pages/one-comment/one-comment.component').then(
+        (c) => c.OneCommentComponent
+      ),
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./pages/not-found/not-found.component').then(

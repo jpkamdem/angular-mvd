@@ -5,7 +5,7 @@
   .nav-item {
     @apply block uppercase font-bold p-4 bg-rose-800 text-white hover:text-rose-800 hover:bg-rose-100;
   }
-  .one-user {
+  .detail-item {
     @apply bg-red-50 p-4 my-4;
   }
   .loading-center {

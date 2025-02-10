@@ -1,0 +1,14 @@
+@if (comments().length > 0) {
+<h1 class="block text-center my-6 font-bold text-xl">Liste des commentaires</h1>
+<ul class="w-[80dvw] mx-auto flex flex-wrap ">
+  @for (comment of comments(); track comment.id) {
+  <a [routerLink]="['/comments', comment.id]">
+    <li class="bg-rose-800 p-6 m-2 text-white font-bold hover:cursor-pointer hover:bg-rose-100 hover:text-rose-800">
+      <p>{{comment.name}}</p>
+    </li>
+  </a>
+  }
+</ul>
+} @else {
+<p class="loading-center">Chargement des données...</p>
+}

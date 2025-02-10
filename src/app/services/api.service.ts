@@ -30,6 +30,7 @@ export class ApiService {
     try {
       const options: RequestInit = {
         signal: AbortSignal.timeout(10000),
+        mode: 'cors',
         method,
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
@@ -52,7 +53,7 @@ export class ApiService {
         };
       }
 
-      const data: T[] = await response.json();
+      const data: T = await response.json();
       return { error: null, code: response.status, data };
     } catch (error) {
       return {

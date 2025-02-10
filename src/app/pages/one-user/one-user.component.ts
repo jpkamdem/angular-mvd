@@ -9,6 +9,7 @@ import { RedirectButtonComponent } from '../../components/redirect-button/redire
   imports: [RedirectButtonComponent],
   providers: [UserService],
   templateUrl: './one-user.component.html',
+  styles: ``,
 })
 export class OneUserComponent {
   readonly route = inject(ActivatedRoute);
